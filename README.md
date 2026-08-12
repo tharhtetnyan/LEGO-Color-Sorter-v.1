@@ -55,7 +55,9 @@ A motorized rail rotates to the output position corresponding to the classified 
 
 ## Software / control
 
-Written in Python on the LEGO Mindstorms Education platform, controlling motor and sensor I/O directly on the EV3 brick.
+Written in **EV3 MicroPython**, the official Python environment for LEGO Mindstorms Education, controlling motor and sensor I/O directly on the EV3 brick.
+
+Color classification uses **thresholded RGB / reflected-light values** from the color sensor — each reading is compared against fixed ranges for the four target colors rather than a lookup table. Timing between stages (push → sense → sort) is **fixed-delay**, with each motor action given a set duration before the next stage begins.
 
 
 ---
@@ -75,6 +77,7 @@ Written in Python on the LEGO Mindstorms Education platform, controlling motor a
 - **No jam/misfeed detection** — a stuck or double-fed brick at the magazine would stall the run silently.
 - **No logging** — sensor readings and classification results aren't currently recorded, which would help quantify accuracy and tune sensor thresholds.
 - **Fixed 4-color capacity** — bin count is mechanically limited to the diverter's rotation positions.
+
 
 ---
 
