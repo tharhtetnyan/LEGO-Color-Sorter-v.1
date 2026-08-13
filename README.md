@@ -2,9 +2,8 @@
 
 An autonomous sorting machine built on LEGO Mindstorms EV3 that classifies bricks by color in real time and routes them into matching bins. Fully unattended after a single trigger press — sorts 16 bricks in 20 seconds.
 
-<video src="https://tharhtetnyan.github.io/assets/projects/lego-color-sorter-v1.mp4" controls muted playsinline width="360">
-  Your browser doesn't support embedded video — <a href="https://tharhtetnyan.github.io/assets/projects/lego-color-sorter-v1.mp4">watch the clip directly</a>.
-</video>
+
+**Demo:** [Watch the full sort run](https://tharhtetnyan.github.io/assets/projects/lego-color-sorter-v1.mp4)
 
 ---
 
