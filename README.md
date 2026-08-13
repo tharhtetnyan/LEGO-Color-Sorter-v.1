@@ -52,7 +52,6 @@ A motorized rail rotates to the output position corresponding to the classified 
 | 6 | Support frame / legs |
 | 7 | Color-sorted collection bins |
 
-> Double check 1–7 against the diagram before publishing — confirm which of 3/4 is the pusher motor vs. the diverter motor.
 
 ---
 
