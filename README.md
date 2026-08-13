@@ -66,7 +66,6 @@ A motorized rail rotates to the output position corresponding to the classified 
 | Technic beam/frame assembly | Structural frame, magazine rail, diverter arm |
 | 4× cups | Color-sorted output bins |
 
-> Confirm exact motor variants (Large/Medium servo motor) and whether a touch sensor or the EV3 brick's own buttons trigger the run.
 
 ---
 
