@@ -2,7 +2,9 @@
 
 An autonomous sorting machine built on LEGO Mindstorms EV3 that classifies bricks by color in real time and routes them into matching bins. Fully unattended after a single trigger press — sorts 16 bricks in 20 seconds.
 
-**Demo:** https://tharhtetnyan.github.io/assets/projects/lego-color-sorter-v1.mp4
+<video src="https://tharhtetnyan.github.io/assets/projects/lego-color-sorter-v1.mp4" controls muted playsinline width="360">
+  Your browser doesn't support embedded video — <a href="https://tharhtetnyan.github.io/assets/projects/lego-color-sorter-v1.mp4">watch the clip directly</a>.
+</video>
 
 ---
 
@@ -36,6 +38,22 @@ As the brick passes through the gate, an EV3 color sensor takes a reading and th
 **4. Sort (rotating diverter)**
 A motorized rail rotates to the output position corresponding to the classified color and releases the brick, which drops into one of four cups acting as color bins. The rail then resets to a neutral or next-target position for the following cycle.
 
+**FIG. 1 — Mechanism diagram**
+
+![FIG. 1 — LEGO Color Sorter mechanism diagram](image.png)
+
+| Ref. | Component |
+|---|---|
+| 1 | Vertical brick magazine (storage rail) |
+| 2 | Magazine guide rail |
+| 3 | Motorized pusher assembly |
+| 4 | Diverter motor |
+| 5 | Rotating diverter rail |
+| 6 | Support frame / legs |
+| 7 | Color-sorted collection bins |
+
+> Double check 1–7 against the diagram before publishing — confirm which of 3/4 is the pusher motor vs. the diverter motor.
+
 ---
 
 ## Hardware
@@ -59,7 +77,6 @@ Written in **EV3 MicroPython**, the official Python environment for LEGO Mindsto
 
 Color classification uses **thresholded RGB / reflected-light values** from the color sensor — each reading is compared against fixed ranges for the four target colors rather than a lookup table. Timing between stages (push → sense → sort) is **fixed-delay**, with each motor action given a set duration before the next stage begins.
 
-
 ---
 
 ## Results
@@ -67,7 +84,6 @@ Color classification uses **thresholded RGB / reflected-light values** from the 
 - Completed 16/16 bricks across 4 color classes in the demo run, each landing in its correct color bin
 - Consistent per-brick cycle time (~1.25 s) across the run, indicating stable mechanical timing rather than sensor-driven stalls
 - No manual reset or intervention required between bricks
-
 
 ---
 
@@ -77,7 +93,6 @@ Color classification uses **thresholded RGB / reflected-light values** from the 
 - **No jam/misfeed detection** — a stuck or double-fed brick at the magazine would stall the run silently.
 - **No logging** — sensor readings and classification results aren't currently recorded, which would help quantify accuracy and tune sensor thresholds.
 - **Fixed 4-color capacity** — bin count is mechanically limited to the diverter's rotation positions.
-
 
 ---
 
